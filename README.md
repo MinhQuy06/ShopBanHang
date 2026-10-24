@@ -189,7 +189,7 @@ public class WikipediaArticle {
 The main advantage of the approach used in this example is not in the lines of code written, although Serenity does reduce a lot of the boilerplate code that you would normally need to write in a web test. The real advantage is in the use of many small, stable classes, each of which focuses on a single job. This application of the _Single Responsibility Principle_ goes a long way to making the test code more stable, easier to understand, and easier to maintain.
 
 ## Executing the tests
-To run the sample project, you can either just run the `CucumberTestSuite` test runner class, or run either `mvn verify` or `gradle test` from the command line.
+JDK 25 is required to build and run the project. You can either run the `CucumberTestSuite` test runner class, or run `mvn verify` or `./gradlew test` from the command line.
 
 By default, the tests will run using Chrome. You can run them in Firefox by overriding the `driver` system property, e.g.
 ```json
@@ -197,7 +197,7 @@ $ mvn clean verify -Ddriver=firefox
 ```
 Or
 ```json
-$ gradle clean test -Pdriver=firefox
+$ ./gradlew clean test -Pdriver=firefox
 ```
 
 The test results will be recorded in the `target/site/serenity` directory.
